@@ -1,0 +1,12 @@
+.app {
+    padding: 20px 360px 40px 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+@media (max-width: 768px) {
+    .app {
+        padding: 20px 10px;
+    }
+}

@@ -1,0 +1,12 @@
+#second-table-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+  } 
+
+  @media (max-width: 768px) {
+    #second-table-wrapper {
+      padding: 0 20px;
+    }
+  }

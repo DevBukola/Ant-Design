@@ -1,0 +1,17 @@
+#select-wrapper {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.select, .second-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    #select-wrapper {
+      padding: 0 20px;
+    }
+  }

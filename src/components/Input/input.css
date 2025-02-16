@@ -1,0 +1,14 @@
+#input-wrapper {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @media (max-width: 768px) {
+    #input-wrapper {
+      padding: 0 20px;
+    }
+  }
+  
+  
