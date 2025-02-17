@@ -12,7 +12,7 @@ function AntForm() {
   };
   return (
     <div id="form-wrapper">
-      <h1>Form</h1>
+      <h1 className="title">Form</h1>
       <div className="form">
         <Form onFinish={onFinish}>
           <Form.Item label="User Name" name="username">

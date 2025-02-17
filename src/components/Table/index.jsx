@@ -62,7 +62,7 @@ function AntTable() {
 
   return (
     <div id="table-wrapper">
-      <h1>Table</h1>
+      <h1 className="title">Table</h1>
       <Table dataSource={data} columns={columns}></Table>
     </div>
   );

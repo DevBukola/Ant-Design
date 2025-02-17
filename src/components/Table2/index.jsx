@@ -56,7 +56,7 @@ function AntSecondTable() {
   ];
   return (
     <div id="second-table-wrapper">
-      <h1>Table Pagination, Sorting and Filters</h1>
+      <h1 className="title">Table Pagination, Sorting and Filters</h1>
       <div className="second-table">
         <Table
           loading={loading}

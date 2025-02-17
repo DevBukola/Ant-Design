@@ -72,7 +72,7 @@ function AntThirdTable() {
   ];
   return (
     <div id="third-table-wrapper">
-      <h1>Table: How to select rows and customize</h1>
+      <h1 className="title">Table: How to select rows and customize</h1>
       <div className="third-table">
         <Table
           columns={columns}

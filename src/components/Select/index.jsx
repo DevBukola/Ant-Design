@@ -6,7 +6,7 @@ function AntSelect() {
     const fruits = ['Banana', 'Apple', 'Mango', 'Orange', 'Cherry']
   return (
     <div id="select-wrapper">
-          <h1>Select</h1>
+          <h1 className="title">Select</h1>
           <div className="select">
               <p>Which is your favorite fruit?</p>
               <Select placeholder='Select fruit' style={{ width: '100%' }}>

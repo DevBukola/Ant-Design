@@ -6,7 +6,7 @@ import { DatePicker, TimePicker } from "antd";
 function AntDatePicker() {
   return (
     <div id="datepicker-wrapper">
-      <h1>Datepicker</h1>
+      <h1 className="title">Datepicker</h1>
       <div className="datepicker">
         <DatePicker picker="year"/>
         <DatePicker />
