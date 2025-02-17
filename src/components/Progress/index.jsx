@@ -6,7 +6,7 @@ import { Progress } from "antd";
 function AntProgress() {
   return (
     <div id="progress-wrapper">
-      <h1>Progress</h1>
+      <h1 className="title">Progress</h1>
       <div className="progress">
               <Progress percent={45} />
               <Progress percent={45} type="circle" />

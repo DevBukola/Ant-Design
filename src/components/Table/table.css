@@ -1,12 +1,16 @@
 #table-wrapper {
-    padding: 0 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-size: 16px;
 }
 
 @media (max-width: 768px) {
-    #table-wrapper {
-      padding: 0 20px;
-    }
+  #table-wrapper {
+    padding: 0 20px;
   }
+}

@@ -16,7 +16,8 @@ function AntButton() {
   };
   return (
     <div id="button">
-      <h1>Button</h1>
+      <h1 className="header">Ant-Design Practice</h1>
+      <h1 className="title">Button</h1>
       <div className="header">
         <Button
           className="my-btn"

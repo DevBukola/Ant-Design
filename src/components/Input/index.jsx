@@ -7,7 +7,7 @@ import { UserOutlined } from "@ant-design/icons";
 function AntInput() {
   return (
     <div id="input-wrapper">
-      <h1>Input</h1>
+      <h1 className="title">Input</h1>
       <Input
         placeholder="Name"
         maxLength={15}

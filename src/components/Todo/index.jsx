@@ -49,6 +49,7 @@ function AntTodo() {
       ...allTasks.slice(index + 1),
     ];
     setTasks(updatedTasks);
+    localStorage.setItem("tasktodo", JSON.stringify(updatedTasks));
   };
 
   const handleMarkAsDone = (index) => {
@@ -70,6 +71,7 @@ function AntTodo() {
       ...doneTasks.slice(index + 1),
     ];
     setDoneTasks(updatedDoneTasks);
+    localStorage.setItem("donetodo", JSON.stringify(updatedDoneTasks));
   };
 
   const handleAddNewTask = () => {
@@ -84,64 +86,69 @@ function AntTodo() {
     localStorage.setItem("tasktodo", JSON.stringify(updatedTaskArray));
   };
   return (
-    <div id="todo-wrapper">
-      <Card className="card-wrapper">
-        <div className="add-task-box">
-          <Input
-            type="text"
-            value={newTask}
-            onChange={(event) => {
-              setNewTask(event.target.value);
-            }}
-            className="input"
-            placeholder="Add a new task"
-            style={{ color: "white" }}
-            // suffix={<Button type="primary" icon={<PlusOutlined />} />}
-          />
-          <Button
-            onClick={handleAddNewTask}
-            className="add-btn"
-            type="primary"
-            icon={<PlusOutlined />}
-          ></Button>
-        </div>
-        <Card className="tasks-todo-card">
-          <h3>Tasks to do - {allTasks.length}</h3>
-          {allTasks.map((item, index) => {
-            return (
-              <List>
+    <div id="todo-container">
+      <h1 className="title">Todo App</h1>
+      <div id="todo-wrapper">
+        <Card className="card-wrapper">
+          <div className="add-task-box">
+            <Input
+              type="text"
+              value={newTask}
+              onChange={(event) => {
+                setNewTask(event.target.value);
+              }}
+              className="input"
+              placeholder="Add a new task"
+              style={{ color: "white" }}
+              // suffix={<Button type="primary" icon={<PlusOutlined />} />}
+            />
+            <Button
+              onClick={handleAddNewTask}
+              className="add-btn"
+              type="primary"
+              icon={<PlusOutlined />}
+            ></Button>
+          </div>
+          <div className="custom-card-wrapper">
+            <Card className="custom-card">
+              <h3>Tasks to do - {allTasks.length}</h3>
+              {allTasks.map((item, index) => {
+                return (
+                  <List>
+                    <div className="list-wrapper" key={index}>
+                      <p className="item">{item.task}</p>
+                      <div className="cta-icons">
+                        <CheckOutlined
+                          className="check"
+                          onClick={() => handleMarkAsDone(index)}
+                        />
+                        <DeleteOutlined
+                          className="delete-added-task"
+                          onClick={() => handleDeleteTask(index)}
+                        />
+                      </div>
+                    </div>
+                  </List>
+                );
+              })}
+            </Card>
+            <Card className="done-tasks">
+              <h3>Done - {doneTasks.length}</h3>
+              {doneTasks.map((item, index) => (
                 <div className="list-wrapper" key={index}>
-                  <p className="item">{item.task}</p>
-                  <div className="cta-icons">
-                    <CheckOutlined
-                      className="check"
-                      onClick={() => handleMarkAsDone(index)}
-                    />
-                    <DeleteOutlined
-                      className="delete-added-task"
-                      onClick={() => handleDeleteTask(index)}
-                    />
-                  </div>
+                  <Typography.Text delete className="item">
+                    {item.task}
+                  </Typography.Text>
+                  <DeleteOutlined
+                    className="delete-done-task"
+                    onClick={() => handleDeleteDoneTask(index)}
+                  />
                 </div>
-              </List>
-            );
-          })}
+              ))}
+            </Card>
+          </div>
         </Card>
-        <Card className="done-tasks">
-          <h3>Done - {doneTasks.length}</h3>
-          {doneTasks.map((item, index) => (
-            <div className="list-wrapper" key={index}>
-              <Typography.Text delete className="item">
-                {item.task}
-              </Typography.Text>
-              <DeleteOutlined
-                className="delete-done-task"
-                onClick={() => handleDeleteDoneTask(index)}
-              />
-            </div>
-          ))}
-        </Card>
-      </Card>
+      </div>
     </div>
   );
 }

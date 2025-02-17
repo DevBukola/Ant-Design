@@ -7,7 +7,7 @@ function AntSpin() {
   const [loading, setLoading] = useState(false);
   return (
     <div id="spin-wrapper">
-      <h1>Spin</h1>
+      <h1 className="title">Spin</h1>
       <div className="spin">
         <Spin spinning={loading}></Spin>
         <Button

@@ -1,24 +1,39 @@
+#todo-container {
+  margin: 0 50px;
+}
+
 #todo-wrapper {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  margin: 0 50px;
   padding: 20px;
   background: #0d0714;
-
+  border-radius: 6px;
   /* min-height: 100vh; */
+}
+
+#todo-wrapper .ant-card-body {
+  padding: 8px;
+}
+
+.title {
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .card-wrapper {
   background: inherit;
   border: none;
+  align-items: center;
+  width: 100%;
   /* height: fit-content; */
 }
 .add-task-box {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
   background: inherit;
+  width: 100%;
 }
 .input {
   background: inherit;
@@ -39,16 +54,23 @@
   border: 1px solid #3e1671;
   outline: none;
 }
-.tasks-todo-card {
+.custom-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.custom-card {
   background: inherit;
   border: none;
   margin-top: 20px;
   color: #fff;
+  width: 100%;
 }
 .done-tasks {
   background: inherit;
   border: none;
   color: #fff;
+  width: 100%;
 }
 .add-btn {
   height: 40px;
@@ -57,37 +79,43 @@
 }
 
 .list-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #15101c;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #15101c;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 12px;
 }
 
 .list-wrapper p {
-    margin: 0;
+  margin: 0;
 }
 
 .cta-icons {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #9e78cf;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #9e78cf;
 }
 
-.item, .delete-done-task{
+.item,
+.delete-done-task {
   color: #9e78cf;
 }
 
 .done-tasks .item {
-    color: #78cfb0;
+  color: #78cfb0;
 }
 
 @media (max-width: 768px) {
+  #todo-container {
+    margin: 10px;
+  }
   #todo-wrapper {
     padding: 10px;
-    margin: 10px;
+  }
+  .title {
+    margin-bottom: 14px;
   }
 }
